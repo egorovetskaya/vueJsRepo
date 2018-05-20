@@ -13,12 +13,12 @@
 
 			<thead>
 				<tr>
-					<th v-for="col of options.cols"> {{ col }} </th>
+					<th v-for="col of options.cols"> Header </th>
 				</tr>
 			</thead>
 			<tbody>
-					<tr v-for="row of options.rows - 1">
-						<td v-for="col of options.cols"> {{ col }} </td>
+					<tr v-for="row of options.rows">
+						<td v-for="col of options.cols"> Text </td>
 					</tr>
 			</tbody>
 		</table>
@@ -30,10 +30,10 @@
 
 			data : {
 				options : {
-					rows : 11,
+					rows : 10,
 					cols : 3,
-				}
-			},
+				},
+			}
 		});
 	</script>
 		

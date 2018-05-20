@@ -8,12 +8,15 @@
 
 </head>
 <body>
-	<div id="vue-app">
+	<div id="app">
+		
 		<button v-on:click="show = !show"> Скрыть/Показать</button>
 		<transition name="animation">
-		<p v-if="show">Будущая таблица</p>
+		<p v-if="show">
+			<app-name></app-name>
+		</p>
 		</transition>
-	
+		
 	</div>
 	<script src="app.js"></script>
 </body>
