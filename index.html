@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>VueJS project</title>
+	<link rel="stylesheet" type="text/css" href="styles.css">
+	<script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+
+</head>
+<body>
+	<div id="vue-app">
+		<button v-on:click="show = !show"> Скрыть/Показать</button>
+		<transition name="animation">
+		<p v-if="show">Будущая таблица</p>
+		</transition>
+	
+	</div>
+	<script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,14 @@
+#grid{}
+#grid table {border-collapse: collapse;}
+#grid table thead {background: #efefef;}
+#grid table thead th {width: 100px;
+  border: 1px solid #d3d3d3;
+  width: 100px;}
+
+.animation-enter-active, .animation-leave-active {
+  transition: all .5s;
+}
+
+.animation-enter, .animation-leave-to {
+  transform: translateY(-100px);
+ }
