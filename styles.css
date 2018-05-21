@@ -1,29 +1,9 @@
-/*#grid{}
-#grid table {border-collapse: collapse;}
-#grid table thead {background: #efefef;}
-#grid table thead th, 
-#grid table tbody td {width: 100px;
-  border: 1px solid #d3d3d3;
-  width: 130px;
-  height: 25px;
-  text-align: center;}*/
 
 .animation-enter-active, .animation-leave-active {
   transition: all 1s;
 }
 .animation-enter, .animation-leave-to {
   transform: translateX(-500px);
- }
-
- .name {
-  width: 30%;
-  margin: 10px 31%;
-  background: #fafafa;
-  border: 2px solid silver;
-  border-radius: 10px;
-  padding: 1.2% 2%;
-  color: #474747;
-  font-size: 1.1em;
  }
 
 .th, td {
