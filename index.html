@@ -9,32 +9,33 @@
 
 </head>
 <body>
+
+	<template id="grid">
+		<table>
+			<thead>
+				<tr>
+					<th v-for="th of header"> {{ th.name }} </th>
+				</tr>
+			</thead>
+			<tbody>
+					<tr v-for="content of body">
+						<td v-for="column of header"> {{ content[column.alias] }} </td>
+					</tr>
+			</tbody>
+		</table>
+	</template>
+
 	<div id="app">
-		
 		<button v-on:click="show = !show"> Скрыть/Показать</button>
 		<transition name="animation">
-			<p v-if="show">
-			<table>
-				<thead>
-				<tr>
-					<th>User Name</th>
-					<th>Score</th>
-					<th>Year</th>
-				</tr>
-				</thead>
-				<tbody data-bind="foreach: teams">
-				<tr>
-					<td data-bind="text: User_Name"></td>
-					<td data-bind="text: score "></td>
-					<td data-bind="text: team "></td>
-				</tr>
-				</tbody>
-			</table>
-			<!--<app-name></app-name>-->
-			</p>
+			<app-grid v-if="show"></app-grid>
+		</div>
 		</transition>
-		
 	</div>
+
+
+
+	<script src="grid.js"></script>
 	<script src="app.js"></script>
 </body>
 </html>
