@@ -4,6 +4,7 @@
 	<meta charset="utf-8">
 	<title>VueJS project</title>
 	<link rel="stylesheet" type="text/css" href="styles.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
 
 </head>
@@ -12,9 +13,25 @@
 		
 		<button v-on:click="show = !show"> Скрыть/Показать</button>
 		<transition name="animation">
-		<p v-if="show">
-			<app-name></app-name>
-		</p>
+			<p v-if="show">
+			<table>
+				<thead>
+				<tr>
+					<th>User Name</th>
+					<th>Score</th>
+					<th>Year</th>
+				</tr>
+				</thead>
+				<tbody data-bind="foreach: teams">
+				<tr>
+					<td data-bind="text: User_Name"></td>
+					<td data-bind="text: score "></td>
+					<td data-bind="text: team "></td>
+				</tr>
+				</tbody>
+			</table>
+			<!--<app-name></app-name>-->
+			</p>
 		</transition>
 		
 	</div>

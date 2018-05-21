@@ -1,4 +1,4 @@
-#grid{}
+/*#grid{}
 #grid table {border-collapse: collapse;}
 #grid table thead {background: #efefef;}
 #grid table thead th, 
@@ -6,14 +6,13 @@
   border: 1px solid #d3d3d3;
   width: 130px;
   height: 25px;
-  text-align: center;}
+  text-align: center;}*/
 
 .animation-enter-active, .animation-leave-active {
   transition: all 1s;
 }
-
 .animation-enter, .animation-leave-to {
-  transform: translateX(1000px);
+  transform: translateX(-500px);
  }
 
  .name {
@@ -26,3 +25,11 @@
   color: #474747;
   font-size: 1.1em;
  }
+
+.th, td {
+    width: 100px;
+    border: 1px solid #d3d3d3;
+    width: 130px;
+    height: 25px;
+    text-align: center;
+}
