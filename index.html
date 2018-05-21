@@ -6,6 +6,8 @@
 	<link rel="stylesheet" type="text/css" href="styles.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/vue-router/3.0.1/vue-router.js"></script>
+	
 
 </head>
 <body>
@@ -25,17 +27,50 @@
 		</table>
 	</template>
 
-	<div id="app">
-		<button v-on:click="show = !show"> Скрыть/Показать</button>
-		<transition name="animation">
-			<app-grid v-if="show"></app-grid>
+	<template id="app">
+		<div>
+				<button v-on:click="show = !show"> Скрыть/Показать</button>
+				<transition name="animation">
+					<app-grid v-if="show"></app-grid>
+				</div>
+				</transition>
 		</div>
-		</transition>
+	</template>
+
+	<div id="zzz">
+			<p>
+					<router-link to="/foo">Go to Foo</router-link>
+					<br>
+					<router-link to="/bar">Go to Bar</router-link>
+					<br>
+					<router-link to="/head-table">Go to Head-Table</router-link>
+					<br>
+					<router-link to="/grid">Go to Grid</router-link>
+				</p>
+				<hr>
+				<router-view></router-view>
 	</div>
-
-
-
+	
 	<script src="grid.js"></script>
 	<script src="app.js"></script>
+	<script>
+		const Foo = { template: '<div>foo</div>' }
+		const Bar = { template: '<div>bar</div>' }
+
+		const routes = [
+			{ path: '/foo', component: Foo },
+			{ path: '/grid', component: grid },
+			{ path: '/head-table', component: headTable },
+			{ path: '/bar', component: Bar }
+		]
+
+		const router = new VueRouter({
+			routes
+		})
+
+		const app = new Vue({
+			router
+		}).$mount('#zzz')
+	</script>
 </body>
 </html>

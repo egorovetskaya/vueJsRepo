@@ -1,6 +1,8 @@
-new Vue({
-	el: "#app",
-	data: {
-		show: false,
+const headTable = Vue.component('head-table', {
+	template: "#app",
+	data() {
+        return {
+            show: true,
+        }
 	},
 });

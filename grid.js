@@ -1,4 +1,4 @@
-Vue.component('app-grid', {
+const grid = Vue.component('app-grid', {
 	template: "#grid",
 	data() {
 		return {
